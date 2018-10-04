@@ -63,7 +63,10 @@ Page({
       })
     })
     // 因为用了缓存, 所以会有 很大的问题,点击喜欢切换页面 喜欢的状态显示错误, 其他显示状态的问题也类似, 所以再次检查喜欢的状态
-    likeModules.likeStatus(this.data.periodicalData.type, this.data.periodicalData.id, (res) => {
+    this.checkoutLikeStatus(this.data.periodicalData.type, this.data.periodicalData.id)
+  },
+  checkoutLikeStatus (type, id) {
+    likeModules.likeStatus(type, id, (res) => {
       let newVal = Object.assign(this.data.periodicalData, res)
       this.setData({
         periodicalData: newVal
