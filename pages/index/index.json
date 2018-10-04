@@ -1,0 +1,16 @@
+{
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "往事如风",
+  "backgroundColor": "#aaa",
+  "backgroundTextStyle": "light",
+  "disableScroll": true,
+  "usingComponents": {
+    "wind-like": "/components/like/index",
+    "wind-movie": "/components/periodical/movie/index",
+    "wind-periodicalNumber": "/components/periodicalNumber/index",
+    "wind-navigation": "/components/navigation/index",
+    "wind-music": "/components/periodical/music/index",
+    "wind-essay": "/components/periodical/essay/index"
+  }
+}

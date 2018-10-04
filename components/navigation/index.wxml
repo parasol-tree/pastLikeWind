@@ -1,0 +1,14 @@
+<!--components/navigation/index.wxml-->
+<view class="navigationContainer">
+  <image
+    class="triangle left"
+    src="{{latestPeriodical ? triangleLeftDisableSrc: triangleLeftSrc}}"
+    bind:tap="triangleLeft"
+  />
+  <text class="title">{{title}}</text>
+  <image
+    class="triangle right"
+    src="{{firstPeriodical ? triangleRightDisableSrc: triangleRightSrc}}"
+    bind:tap="triangleRight"
+  />
+</view>

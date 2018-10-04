@@ -1,0 +1,24 @@
+<view class="container">
+  <view class="container_header">
+    <wind-periodicalNumber
+      periodicalNumber="{{periodicalData.index}}"
+    ></wind-periodicalNumber>
+    <wind-like
+      like="{{periodicalData.like_status}}"
+      count="{{periodicalData.fav_nums}}"
+      bind:whetherLikeFN="whetherLikeFN"
+    ></wind-like>
+  </view>
+  <wind-movie
+    class="wind-movie"
+    img="{{periodicalData.image}}"
+    content="{{periodicalData.content}}"
+  ></wind-movie>
+  <wind-navigation class="wind-navigation"
+    firstPeriodical="{{firstPeriodical}}"
+    latestPeriodical="{{latestPeriodical}}"
+    title="{{periodicalData.title}}"
+    bind:triangleLeft="triangleLeft"
+    bind:triangleRight="triangleRight"
+  ></wind-navigation>
+</view>

@@ -1,0 +1,6 @@
+<!--components/periodical/movie/index.wxml-->
+<view class="movieContainer">
+  <image class="movieImg" src="{{img}}" />
+  <image class="movieImgTitle" src="{{movieImgTitleSrc}}" />
+  <text class="movieContent">{{content}}</text>
+</view>

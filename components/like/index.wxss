@@ -1,0 +1,20 @@
+.imgContainer {
+  display: inline-flex; /* 自适应宽度 */
+  padding: 10rpx;
+}
+  .imgElem {
+    width: 32rpx;
+    height: 28rpx;
+  }
+  .likeCount {
+    font-size: 24rpx;
+    line-height: 24rpx;/* 去除文字上下的空白 */
+    position: relative;
+    left: 6rpx;
+    bottom: 10rpx;
+    color: #bbb;
+  }
+/*
+  全局的 样式一般 不会被自定义组件继承, 只能继承 font 和 color;
+  但是 页面 可以继承几乎所有的 全局样式
+*/

@@ -1,0 +1,7 @@
+<!--components/periodical/music/index.wxml-->
+<view class="musicContainer">
+  <image class="musicCover" src="{{}}" />
+  <image class="musicPlay" src="{{}}" />
+  <image class="musicTitle" src="./img/music@tag.png" />
+  <text class="musicContent">{{musicContent}}</text>
+</view>

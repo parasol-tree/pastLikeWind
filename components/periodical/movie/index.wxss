@@ -1,0 +1,24 @@
+/* components/periodical/movie/index.wxss */
+.movieContainer {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+  .movieImg {
+    width: 100%;
+    height: 500rpx;
+  }
+  .movieImgTitle {
+    width: 46rpx;
+    height: 142rpx;
+    position: relative;
+    right: 310rpx;
+    bottom: 58rpx;
+  }
+  .movieContent {
+    max-width: 510rpx;
+    font-size: 36rpx;
+    line-height: 50rpx;
+  }

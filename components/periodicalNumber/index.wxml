@@ -1,0 +1,12 @@
+<!--components/periodicalNumber/index.wxml-->
+<view class="container">
+  <view class="periodicalNumber_Container">
+    <text class="no">No.</text>
+    <text class="periodicalNumber">{{_periodicalNumber}}</text>
+    <view class="VerticalLine"></view>
+  </view>
+  <view class="date_Container">
+    <text class="month">{{month}}</text>
+    <text class="year">{{year}}</text>
+  </view>
+</view>

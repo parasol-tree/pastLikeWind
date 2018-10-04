@@ -1,0 +1,7 @@
+<view
+  class="imgContainer"
+  bind:tap="handleOnLike"
+>
+  <image class="imgElem" src="{{like ? likeImgSrc: unLikeImgSrc}}" />
+  <text class="likeCount">{{count}}</text>
+</view>
