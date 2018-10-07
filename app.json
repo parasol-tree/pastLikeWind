@@ -1,6 +1,9 @@
 {
   "pages": [
-    "pages/index/index"
+    "pages/index/index",
+    "pages/book/index",
+    "pages/user/index",
+    "pages/book-detail/book-detail"
   ],
   "window": {
     "navigationBarBackgroundColor": "#fff",
@@ -10,12 +13,37 @@
     "backgroundTextStyle": "black",
     "backgroundColorTop": "#d0d",
     "backgroundColorBottom": "#d0d",
-    "enablePullDownRefresh": true
+    "enablePullDownRefresh": false
   },
   "networkTimeout": {
     "request": 10000,
     "connectSocket": 10000,
     "uploadFile": 10000,
     "downloadFile": 10000
+  },
+  "tabBar": {
+    "color": "#aaa",
+    "selectedColor": "#000",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/img/tabBar/index.png",
+        "selectedIconPath": "/img/tabBar/index@highlight.png"
+      },
+      {
+        "pagePath": "pages/book/index",
+        "text": "书籍",
+        "iconPath": "/img/tabBar/book.png",
+        "selectedIconPath": "/img/tabBar/book@highlight.png"
+      },
+      {
+        "pagePath": "pages/user/index",
+        "text": "用户中心",
+        "iconPath": "/img/tabBar/user.png",
+        "selectedIconPath": "/img/tabBar/user@highlight.png"
+      }
+    ]
   }
 }

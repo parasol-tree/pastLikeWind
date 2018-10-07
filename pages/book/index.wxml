@@ -1,0 +1,26 @@
+<!--pages/book/index.wxml-->
+<view class="bookContainer">
+  <view class="bookHeader">
+    <image class="searchImg" src="../../img/icon/search.png"></image>
+    <text class="searchHintInfo">搜索书籍</text>
+  </view>
+  <text class="featuredResult">精选</text>
+  <view class="bookList">
+  <!-- data 属性 ,获取时,如果之前设置的 小写 会转为 驼峰, 驼峰 会转为 小写 -->
+    <view
+      class="wind-book_ontainer"
+      wx:for="{{books}}"
+      wx:key="id"
+      data-bookId="{{item.id}}"
+      bind:tap="handleNavigationTo"
+    >
+      <wind-book
+        class="wind-book"
+        books="{{item}}"
+      />
+    </view>
+  </view>
+  <!-- 如果滚动区域用 scroll-view 会导致 组件宽度为 100vw, 怎么设置宽度都 无法修改
+      如果你的组件刚好宽度就是 100vw 那倒也无所谓
+   -->
+</view>

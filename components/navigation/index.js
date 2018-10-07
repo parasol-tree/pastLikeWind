@@ -31,14 +31,10 @@ Component({
    */
   methods: {
     triangleLeft () {
-      if (!this.properties.latestPeriodical) {
-        this.triggerEvent('triangleLeft', {}, {})
-      }
+      this.properties.latestPeriodical ? '' : this.triggerEvent('triangleLeft', {}, {})
     },
     triangleRight () {
-      if (!this.properties.firstPeriodical) {
-        this.triggerEvent('triangleRight', {}, {})
-      }
+      this.properties.firstPeriodical ? '' : this.triggerEvent('triangleRight', {}, {})
     }
   }
 })

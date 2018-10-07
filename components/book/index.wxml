@@ -1,0 +1,9 @@
+<!--components/book/index.wxml-->
+<view class="container">
+  <image class="cover" src="{{books.image}}" ></image>
+  <view class="introduction">
+    <text class="title">{{books.title}}</text>
+    <text class="author">{{books.author}}</text>
+    <view class="likeCount">{{books.fav_nums}}</view>
+  </view>
+</view>

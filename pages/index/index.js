@@ -1,8 +1,14 @@
 // 期刊
-import { PeriodicalModules } from '../../modules/periodical.js'
+import {
+  PeriodicalModules
+} from '../../modules/periodical.js'
 // 进行点赞 or 取消点赞
-import { LikeModules } from '../../modules/like.js'
-import { config } from '../../config.js'
+import {
+  LikeModules
+} from '../../modules/like.js'
+import {
+  config
+} from '../../config.js'
 
 let periodicalModules = new PeriodicalModules()
 let likeModules = new LikeModules()
@@ -27,7 +33,6 @@ Page({
         periodicalData: res
         // ...res // 如果这么写, 请将 本目录内 index.wxml 的 {{periodicalData}} 去掉
       })
-      // console.log(this.data, 'this.data')
     })
   },
   whetherLikeFN (e) {
@@ -68,9 +73,7 @@ Page({
   checkoutLikeStatus (type, id) {
     likeModules.likeStatus(type, id, (res) => {
       let newVal = Object.assign(this.data.periodicalData, res)
-      this.setData({
-        periodicalData: newVal
-      })
+      this.setData({ periodicalData: newVal })
     })
   },
   onPullDownRefresh () {

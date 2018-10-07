@@ -1,6 +1,6 @@
 <!--components/periodical/essay/index.wxml-->
-<view class="essayContainer">
-  <image class="essayImg" src="{{img}}" />
-  <image class="essayImgTitle" src="{{essayImgTitleSrc}}" />
-  <text class="essayContent">{{content}}</text>
+<view class="container" hidden="{{hidden}}">
+  <image class="img" src="{{img}}" />
+  <image class="title" src="{{essayImgTitleSrc}}" />
+  <text class="content">{{content}}</text>
 </view>

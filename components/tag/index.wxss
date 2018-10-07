@@ -1,0 +1,10 @@
+/* components/tag/index.wxss */
+.tagContainer {
+  padding: 4rpx 12rpx;
+  border-radius: 2px;
+  display: inline-flex;
+  align-items: center;
+  font-size: 28rpx;
+  color: #666;
+  background-color: #f5f5f5;
+}

@@ -1,5 +1,7 @@
 // 进行点赞 or 取消点赞
-import { HTTP } from '../utils/ajax.js'
+import {
+  HTTP
+} from '../utils/ajax.js'
 
 class LikeModules extends HTTP {
   constructor() {
@@ -11,19 +13,17 @@ class LikeModules extends HTTP {
       url: url,
       method: 'POST',
       data: params,
-      success: (res) => {
-        callback(res)
-      }
+      success: (res) => { callback(res) }
     })
   }
   likeStatus (type, art_id, callback) {
     this.request({
       url: '/classic/' + type + '/' + art_id + '/favor',
-      success: (res) => {
-        callback(res)
-      }
+      success: (res) => { callback(res) }
     })
   }
 }
 
-export { LikeModules }
+export {
+  LikeModules
+}

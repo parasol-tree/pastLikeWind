@@ -2,23 +2,39 @@
   <view class="container_header">
     <wind-periodicalNumber
       periodicalNumber="{{periodicalData.index}}"
-    ></wind-periodicalNumber>
+    />
     <wind-like
       like="{{periodicalData.like_status}}"
       count="{{periodicalData.fav_nums}}"
       bind:whetherLikeFN="whetherLikeFN"
-    ></wind-like>
+    />
   </view>
+
   <wind-movie
+    hidden="{{periodicalData.type !== 100}}"
     class="wind-movie"
     img="{{periodicalData.image}}"
     content="{{periodicalData.content}}"
-  ></wind-movie>
+  />
+  <wind-music
+    wx:if="{{periodicalData.type == 200}}"
+    class="wind-movie"
+    img="{{periodicalData.image}}"
+    content="{{periodicalData.content}}"
+    musicSrc="{{periodicalData.url}}"
+  />
+  <wind-essay
+    hidden="{{periodicalData.type !== 300}}"
+    class="wind-movie"
+    img="{{periodicalData.image}}"
+    content="{{periodicalData.content}}"
+  />
+
   <wind-navigation class="wind-navigation"
     firstPeriodical="{{firstPeriodical}}"
     latestPeriodical="{{latestPeriodical}}"
     title="{{periodicalData.title}}"
     bind:triangleLeft="triangleLeft"
     bind:triangleRight="triangleRight"
-  ></wind-navigation>
+  />
 </view>

@@ -1,6 +1,10 @@
 // periodical 期刊
-import { HTTP } from '../utils/ajax.js'
-import { config } from '../config.js'
+import {
+  HTTP
+} from '../utils/ajax.js'
+import {
+  config
+} from '../config.js'
 class PeriodicalModules extends HTTP {
   // 获取最新一期
   getLatest (callback) {
@@ -56,4 +60,6 @@ class PeriodicalModules extends HTTP {
   }
 }
 
-export { PeriodicalModules }
+export {
+  PeriodicalModules
+}

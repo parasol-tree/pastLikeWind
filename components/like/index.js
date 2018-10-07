@@ -33,7 +33,7 @@ Component({
       count = like ? count - 1 : count + 1
       this.setData({
         like: !like,
-        count: count
+        count
       })
       let whetherLike = this.properties.like ? 'like' : 'unLike'
       // let whetherLike = this.properties.like

@@ -3,4 +3,6 @@ page {
   height: 100%;
   font-family: "PingFangSC-Thin";/* 只在 IOS 上 起作用 */
   font-size: 32rpx;
+  --roteteFrom: 0deg;
+  --roteteTo: 360deg;
 }

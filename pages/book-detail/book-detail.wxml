@@ -1,0 +1,29 @@
+<!--pages/book-detail/book-detail.wxml-->
+
+<wxs src="../../utils/filter.wxs" module="filter" />
+
+<view class="bookDetailContainer">
+  <view class="bookCoverContainer">
+    <image class="cover" src="{{bookDetail.image}}"></image>
+    <text class="title">{{bookDetail.title}}</text>
+    <text class="author">{{bookDetail.author}}</text>
+  </view>
+
+  <view class="commentConatiner">
+    <text class="commentTitle">短评</text>
+    <view class="commentList">
+      <!-- 显示 数据的前 15 条 -->
+      <block wx:for="{{filter.limt(comments, 0, 15)}}" wx:key="content">
+        <wind-tag text="{{item.content}}">
+          <text class="tagSlot" slot="tagSlot">{{'+' + item.nums}}</text>
+        </wind-tag>
+      </block>
+    </view>
+  </view>
+
+  <view class="introduceContainer">
+    <text class="commentTitle">内容简介</text>
+    <!-- text-indent 不管用 用 &nbsp;代替 -->
+    <text class="introduce" decode="true">{{filter.formatWrapSymbol(bookDetail.summary)}}</text>
+  </view>
+</view>

@@ -1,0 +1,20 @@
+// 将 数据的 \\n 替换为 \n
+var formatWrapSymbol = function (text) {
+  // return text
+  if (text === undefined) {
+    return
+  }
+  var reg = getRegExp('\\\\n', 'g')
+  var value = text.replace(reg, '\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;')
+  return value
+}
+
+// 截取 数组的 生成一个新的数组(分页功能类似)
+var limt = function (array, startIndex, endIndex) {
+  return array.slice(startIndex, endIndex)
+}
+
+module.exports = {
+  formatWrapSymbol: formatWrapSymbol,
+  limt: limt
+}
