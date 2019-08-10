@@ -21,6 +21,7 @@
     class="wind-movie"
     img="{{periodicalData.image}}"
     content="{{periodicalData.content}}"
+    title="{{periodicalData.title}}"
     musicSrc="{{periodicalData.url}}"
   />
   <wind-essay

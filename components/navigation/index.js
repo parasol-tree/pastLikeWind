@@ -4,16 +4,17 @@ Component({
    * 组件的属性列表
    */
   properties: {
+    // 第一期
     firstPeriodical: {
       type: Boolean
     },
+    // 是否是最新一期的
     latestPeriodical: {
       type: Boolean
     },
     title: {
       type: String
     }
-
   },
 
   /**

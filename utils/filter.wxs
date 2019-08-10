@@ -1,3 +1,6 @@
+// WXS（WeiXin Script）是小程序的一套脚本语言，结合 WXML，可以构建出页面的结构。
+// [WXS（WeiXin Script 文档](http://vuejs-templates.github.io/webpack/)
+
 // 将 数据的 \\n 替换为 \n
 var formatWrapSymbol = function (text) {
   // return text

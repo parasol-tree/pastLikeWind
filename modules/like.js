@@ -7,19 +7,20 @@ class LikeModules extends HTTP {
   constructor() {
     super()
   }
-  like(whetherLike, params, callback) {
-    let url = whetherLike === 'like' ? '/like' : '/like/cancel'
-    this.request({
+  // like(whetherLike, params, callback) {
+  like(params) {
+    const paramsCopy = JSON.parse(JSON.stringify(params))
+    let url = paramsCopy.whetherLike === 'like' ? '/like' : '/like/cancel'
+    paramsCopy.hasOwnProperty('whetherLike') && delete paramsCopy.whetherLike
+    return this.request({
       url: url,
-      method: 'POST',
-      data: params,
-      success: (res) => { callback(res) }
+      data: paramsCopy,
+      method: 'POST'
     })
   }
-  likeStatus (type, art_id, callback) {
-    this.request({
-      url: '/classic/' + type + '/' + art_id + '/favor',
-      success: (res) => { callback(res) }
+  likeStatus (params) {
+    return this.request({
+      url: `/classic/${params.type}/${params.art_id}/favor`,
     })
   }
 }

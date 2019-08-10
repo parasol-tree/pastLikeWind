@@ -1,7 +1,7 @@
 // 进行点赞 or 取消点赞
 import {
   HTTP
-} from '../utils/ajax2.js'
+} from '../utils/ajax.js'
 
 class BookModules extends HTTP {
   constructor() {

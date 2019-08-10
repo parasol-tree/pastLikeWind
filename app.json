@@ -5,12 +5,13 @@
     "pages/user/index",
     "pages/book-detail/book-detail"
   ],
+  "requiredBackgroundModes": ["audio"],
   "window": {
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTextStyle": "black",
     "navigationBarTitleText": "往事如风",
     "navigationStyle": "default",
-    "backgroundTextStyle": "black",
+    "backgroundTextStyle": "dark",
     "backgroundColorTop": "#d0d",
     "backgroundColorBottom": "#d0d",
     "enablePullDownRefresh": false
@@ -45,5 +46,6 @@
         "selectedIconPath": "/img/tabBar/user@highlight.png"
       }
     ]
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }

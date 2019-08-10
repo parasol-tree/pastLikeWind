@@ -11,6 +11,9 @@ Component({
   properties: {
     musicSrc: {
       type: String
+    },
+    title: {
+      type: String
     }
   },
   /**
@@ -42,6 +45,7 @@ Component({
   methods: {
     // 处理音乐播放
     handleMusicStatus (e) {
+      this.setMusicTitle()
       if (this.data.isPlaying) {
         // console.log('暂停播放')
         bAM.pause()
@@ -60,8 +64,9 @@ Component({
       ** bAM.paused === false && bAM.src === this.properties.musicSrc
       ** 值为 true 正在播放本组件歌曲, 为 false 没有播放
       */
-      bAM.paused === false && bAM.src === this.properties.musicSrc ?
-        this.setData({ isPlaying: true }): this.setData({ isPlaying: false })
+      bAM.paused === false && bAM.src === this.properties.musicSrc
+      ? this.setData({ isPlaying: true })
+      : this.setData({ isPlaying: false })
     },
     checkUpMusicStatus () {
       bAM.onPlay(() => {
@@ -124,10 +129,11 @@ Component({
       // }).exec()
     },
     setAnimationStatus () {
-      if (this.data.isPlaying) {
-        this.setData({ animationStatus: 'running' })
-      }
+      if (this.data.isPlaying) { this.setData({ animationStatus: 'running' }) }
       else { this.setData({ animationStatus: 'paused' }) }
+    },
+    setMusicTitle () {
+      bAM.title = this.properties.title // 小程序更新文档, 要播放 音频必须要有 title
     }
   }
 })
