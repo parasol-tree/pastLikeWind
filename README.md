@@ -1,5 +1,5 @@
 # pastLikeWind
-> 往事如风小程序
+> 测试 ssh
 ```
 ```
 [WXS（WeiXin Script) 文档](https://developers.weixin.qq.com/miniprogram/dev/framework/view/wxs/)
